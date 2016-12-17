@@ -34,7 +34,6 @@
 #include "stm32f4xx_adc.h"
 #include "stm32f4xx_crc.h"
 #include "stm32f4xx_dbgmcu.h"
-#include "stm32f4xx_dma.h"
 #include "stm32f4xx_exti.h"
 #include "stm32f4xx_flash.h"
 #include "stm32f4xx_gpio.h"
@@ -83,7 +82,6 @@
 #include "stm32f4xx_can.h"
 #include "stm32f4xx_dac.h"
 #include "stm32f4xx_dcmi.h"
-#include "stm32f4xx_fsmc.h"
 #endif /* STM32F40_41xxx */
 
 #if defined (STM32F411xE)
