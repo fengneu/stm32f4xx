@@ -28,9 +28,9 @@ ASFLAGS := --cpu Cortex-M4.fp -g --apcs=interwork \
 	-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include \
 	--pd "__UVISION_VERSION SETA 515" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1"
 
-Keil_OBJS := delay.o main.o misc.o spi.o \
+Keil_OBJS := delay.o main.o misc.o \
 	stm32f4xx_gpio.o stm32f4xx_it.o \
-	stm32f4xx_rcc.o stm32f4xx_sdio.o stm32f4xx_spi.o stm32f4xx_syscfg.o \
+	stm32f4xx_rcc.o \
 	stm32f4xx_usart.o sys.o system_stm32f4xx.o usart.o startup_stm32f40_41xxx.o
 
 .PHONY : all
@@ -39,7 +39,7 @@ Keil_OBJS := delay.o main.o misc.o spi.o \
 all : sd.axf sd.hex
 
 clean :
-	del /q /s *.o sd.axf
+	del /q /s *.o sd.axf sd.hex
 
 sd.hex : sd.axf
 	$(OBJCOPY) $^ --i32combined --output $@
@@ -50,6 +50,6 @@ sd.axf : $(Keil_OBJS)
 %.o : %.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-startup_stm32f40_41xxx.o : startup_stm32f40_41xxx.s
+%.o : %.s
 	$(AS) $(ASFLAGS) -o $@ $<
 
