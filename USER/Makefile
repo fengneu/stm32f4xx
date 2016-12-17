@@ -12,8 +12,7 @@ LDFLAGS := --cpu Cortex-M4.fp --strict --scatter SD.sct --summary_stderr \
 	--info sizes --info totals --info unused --info veneers
 
 CFLAGS := --cpu Cortex-M4.fp -g -O0 --apcs=interwork \
-	-I..\CORE -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart \
-	-I. -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include \
+	-I..\CORE -I. -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include \
 	-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include \
 	-D__UVISION_VERSION="515" -D_RTE_ -DSTM32F407xx -DSTM32F40_41xxx \
 	-DUSE_STDPERIPH_DRIVER --C99
