@@ -34,7 +34,6 @@
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_usart.h"
-#include "misc.h" /* High level functions for NVIC and SysTick (add-on to CMSIS functions) */
 
 #ifdef  USE_FULL_ASSERT
 

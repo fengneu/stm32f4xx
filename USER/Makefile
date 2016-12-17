@@ -2,12 +2,15 @@
 # GNU Make script to replace Keil IDE
 # 2016/12/17
 
+# Use the cmd.exe as default
+SHELL := C:/Windows/System32/cmd.exe
+
 CC := armcc.exe
 AS := armasm.exe
 LD := armlink.exe
 OBJCOPY := fromelf.exe
 
-LDFLAGS := --cpu Cortex-M4.fp --strict --scatter SD.sct --summary_stderr \
+LDFLAGS := --cpu Cortex-M4.fp --strict --scatter out.sct --summary_stderr \
 	--info summarysizes --map --xref --callgraph --symbols \
 	--info sizes --info totals --info unused --info veneers
 
@@ -22,23 +25,24 @@ ASFLAGS := --cpu Cortex-M4.fp -g --apcs=interwork \
 	-IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include \
 	--pd "__UVISION_VERSION SETA 515" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1"
 
-Keil_OBJS := delay.o main.o misc.o \
-	stm32f4xx_gpio.o stm32f4xx_it.o \
-	stm32f4xx_rcc.o \
-	stm32f4xx_usart.o sys.o system_stm32f4xx.o usart.o startup_stm32f40_41xxx.o
+TARGET_OBJS := main.o stm32f4xx_gpio.o stm32f4xx_it.o \
+	stm32f4xx_rcc.o stm32f4xx_usart.o system_stm32f4xx.o \
+	usart.o startup_stm32f40_41xxx.o
+
+TARGETS := out.axf out.hex
 
 .PHONY : all
 .PHONY : clean
 
-all : sd.axf sd.hex
+all : $(TARGETS)
 
 clean :
-	del /q /s *.o sd.axf sd.hex
+	del /q /s *.o $(TARGETS) *.htm
 
-sd.hex : sd.axf
+out.hex : out.axf
 	$(OBJCOPY) $^ --i32combined --output $@
 
-sd.axf : $(Keil_OBJS)
+out.axf : $(TARGET_OBJS)
 	$(LD) $(LDFLAGS) $^ -o $@
 
 %.o : %.c
