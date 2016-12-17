@@ -45,6 +45,7 @@ int main(void)
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//设置系统中断优先级分组2
 	delay_init(168);  //初始化延时函数
 	uart_init(115200);		//初始化串口波特率为115200
+	printf("Applicate starts, compliation date & time: %s, %s\r\n", __DATE__, __TIME__);
 	LED_Init();					//初始化LED  
  	LCD_Init();					//LCD初始化  
  	KEY_Init();					//按键初始化  

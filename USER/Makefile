@@ -1,7 +1,11 @@
+# Created by yeholmes@outlook.com
+# GNU Make script to replace Keil IDE
+# 2016/12/17
 
 CC := armcc.exe
 AS := armasm.exe
 LD := armlink.exe
+OBJCOPY := fromelf.exe
 
 LDFLAGS := --cpu Cortex-M4.fp --strict --scatter SD.sct --summary_stderr \
 	--info summarysizes --map --xref --callgraph --symbols \
@@ -32,10 +36,13 @@ Keil_OBJS := delay.o key.o lcd.o led.o main.o malloc.o misc.o sdio_sdcard.o spi.
 .PHONY : all
 .PHONY : clean
 
-all : sd.axf
+all : sd.axf sd.hex
 
 clean :
 	del /q /s *.o sd.axf
+
+sd.hex : sd.axf
+	$(OBJCOPY) $^ --i32combined --output $@
 
 sd.axf : $(Keil_OBJS)
 	$(LD) $(LDFLAGS) $^ -o $@
