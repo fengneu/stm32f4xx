@@ -26,8 +26,7 @@ ASFLAGS := --cpu Cortex-M4.fp -g --apcs=interwork \
 	--pd "__UVISION_VERSION SETA 515" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1"
 
 TARGET_OBJS := main.o stm32f4xx_gpio.o stm32f4xx_it.o \
-	stm32f4xx_rcc.o stm32f4xx_usart.o system_stm32f4xx.o \
-	usart.o startup_stm32f40_41xxx.o
+	stm32f4xx_rcc.o stm32f4xx_usart.o system_stm32f4xx.o startup_stm32f40_41xxx.o
 
 TARGETS := out.axf out.hex
 
