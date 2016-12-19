@@ -6,21 +6,14 @@
  * Hangzhou, China, 2016/12/18
  */
 
-#include <stdio.h>
-#include "stm32f4xx_conf.h"
-
-#pragma import(__use_no_semihosting)
-struct __FILE
-{
+struct __FILE {
 	int handle;
 };
 
-FILE __stdout;
-void _sys_exit(int x)
-{
-	x = x;
-}
+#include <stdio.h>
+#include "stm32f4xx_conf.h"
 
+FILE __stdout;
 int fputc(int ch, FILE *f)
 {
 	while ((USART1->SR & 0X40) == 0);
@@ -60,7 +53,7 @@ static void uart_init(u32 bound) {
 int main(void)
 {        
 	uart_init(115200);
-	printf("Applicate starts, compliation date & time: %s, %s\r\n", __DATE__, __TIME__);
+	printf("\r\nApplicate starts, compliation date & time: %s, %s\r\n", __DATE__, __TIME__);
 	for (;;) {
 	}
 }

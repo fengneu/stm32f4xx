@@ -14,10 +14,10 @@ LDFLAGS := --cpu Cortex-M4.fp --strict --scatter out.sct --summary_stderr \
 	--info summarysizes --map --xref --callgraph --symbols \
 	--info sizes --info totals --info unused --info veneers --list out.map
 
-CFLAGS := --cpu Cortex-M4.fp -g -O0 --apcs=interwork \
-	-I. -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include \
+CFLAGS := --cpu Cortex-M4.fp -g -O3 --apcs=interwork \
+	-I. -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include \
 	-D__UVISION_VERSION="515" -DSTM32F407xx -DSTM32F40_41xxx \
-	-DUSE_STDPERIPH_DRIVER --C99
+	-DUSE_STDPERIPH_DRIVER --c99
 
 ASFLAGS := --cpu Cortex-M4.fp -g --apcs=interwork \
 	--pd "__UVISION_VERSION SETA 515" --pd "STM32F407xx SETA 1"
