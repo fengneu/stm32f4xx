@@ -6,20 +6,8 @@
  * Hangzhou, China, 2016/12/18
  */
 
-struct __FILE {
-	int handle;
-};
-
 #include <stdio.h>
 #include "stm32f4xx_conf.h"
-
-FILE __stdout;
-int fputc(int ch, FILE *f)
-{
-	while ((USART1->SR & 0X40) == 0);
-	USART1->DR = (u8) ch;
-	return ch;
-}
 
 static void uart_init(u32 bound) {
 	GPIO_InitTypeDef GPIO_InitStructure;
