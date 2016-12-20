@@ -11,12 +11,12 @@ AS := $(TCPREFIX)as
 OBJCOPY := $(TCPREFIX)objcopy
 
 CFLAGS := -mcpu=cortex-m4 -mfloat-abi=hard -march=armv7e-m \
-	-mabi=aapcs -mfpu=vfpv4-d16 -mthumb -Wall -O3 \
+	-mabi=aapcs -mfpu=fpv4-sp-d16 -mthumb -Wall -O3 \
 	-DSTM32F407xx -DSTM32F40_41xxx \
 	-I. -IC:/Keil_v5/ARM/PACK/ARM/CMSIS/5.0.0/CMSIS/Include
 
-LDFLAGS := -mcpu=cortex-m4 -mfloat-abi=hard -march=armv7e-m \
-	-mabi=aapcs -mfpu=vfpv4-d16 -mthumb -Wl,--script=STM32F407VE.ld \
+LDFLAGS := -mthumb -mabi=aapcs -T STM32F407VE.ld -mcpu=cortex-m4 \
+	-mfloat-abi=hard -mfpu=fpv4-sp-d16 \
 	-Wl,--gc-sections --specs=nano.specs -lc -lnosys
 
 TOBJS := main.o stm32f4xx_gpio.o stm32f4xx_rcc.o stm32f4xx_usart.o \
@@ -32,14 +32,14 @@ all : $(TARGETS)
 	$(OBJCOPY) -O ihex $< $@
 
 out.elf : $(TOBJS)
-	$(CC) -o $@ $(LDFLAGS) $^ -lm
+	$(CC) -Wl,-Map=out.map $(LDFLAGS) $^ -lm -o $@
 
 %.o : %.c
-	$(CC) -c -o $@ $(CFLAGS) $<
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 %.o : %.S
-	$(CC) -c -o $@ $(CFLAGS) $<
+	$(CC) $(CFLAGS) -c -o $@ $<
 
-clean:
+clean :
 	rm -rf $(TARGETS) *.o
 

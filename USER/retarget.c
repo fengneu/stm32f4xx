@@ -51,8 +51,6 @@ int _write(int file, const char * p_char, int len)
 {
     int i;
 
-    UNUSED_PARAMETER(file);
-
     for (i = 0; i < len; i++) {
 		while ((USART1->SR & 0X40) == 0);
 		USART1->DR = (uint8_t) p_char[i];
@@ -61,10 +59,10 @@ int _write(int file, const char * p_char, int len)
     return len;
 }
 
-
 int _read(int file, char * p_char, int len)
 {
     return 0;
 }
+
 #endif
 

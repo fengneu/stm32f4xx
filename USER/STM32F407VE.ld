@@ -180,6 +180,7 @@ SECTIONS
     libc.a ( * )
     libm.a ( * )
     libgcc.a ( * )
+    libnosys.a ( * )
   }
 
   .ARM.attributes 0 : { *(.ARM.attributes) }
