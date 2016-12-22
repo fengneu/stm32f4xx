@@ -1,5 +1,23 @@
 
 ksdk_root=/home/ye/program/ksdk_1.3.0
+include_dirs := -I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU \
+	-I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU \
+	-I${ksdk_root}/platform/osa/inc \
+	-I${ksdk_root}/platform/utilities/inc \
+	-I${ksdk_root}/platform/CMSIS/Include \
+	-I${ksdk_root}/platform/devices \
+	-I${ksdk_root}/platform/devices/MK60D10/include \
+	-I${ksdk_root}/platform/devices/MK60D10/startup \
+	-I${ksdk_root}/platform/hal/inc \
+	-I${ksdk_root}/platform/drivers/inc \
+	-I${ksdk_root}/platform/system/inc \
+	-I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../.. \
+	-I${ksdk_root}/platform/drivers/src/i2c \
+	-I${ksdk_root}/rtos/uCOSIII/src/config \
+	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source \
+	-I${ksdk_root}/rtos/uCOSIII/src/uC-CPU \
+	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB \
+	-I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/CMakeFiles/3.5.2/CompilerIdASM] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
@@ -7,15 +25,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -24,15 +34,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -41,15 +43,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-g -g -g -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -Wall -fno-common -ffunction-sections
 	-fdata-sections -ffreestanding -fno-builtin -mapcs -std=gnu99 -DDEBUG
 	-o ${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU/os_cpu_a.S.obj -c
@@ -57,15 +51,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -74,15 +60,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-g -g -g -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -Wall -fno-common -ffunction-sections
 	-fdata-sections -ffreestanding -fno-builtin -mapcs -std=gnu99 -DDEBUG
 	-o ${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU/cpu_a.S.obj -c
@@ -90,15 +68,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-g -g -g -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -Wall -fno-common -ffunction-sections
 	-fdata-sections -ffreestanding -fno-builtin -mapcs -std=gnu99 -DDEBUG
 	-o ${ksdk_root}/platform/devices/MK60D10/startup/gcc/startup_MK60D10.S.obj -c
@@ -106,15 +76,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -123,15 +85,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -140,15 +94,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -157,15 +103,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -174,15 +112,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -191,15 +121,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -208,15 +130,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -225,15 +139,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -242,15 +148,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -259,15 +157,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -276,15 +166,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -293,15 +175,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -310,15 +184,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -327,15 +193,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -344,15 +202,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -361,15 +211,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -378,15 +220,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -395,15 +229,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -412,15 +238,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -429,15 +247,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -446,15 +256,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -463,15 +265,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -480,15 +274,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -497,15 +283,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -514,15 +292,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -531,15 +301,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -548,15 +310,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -565,15 +319,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -582,15 +328,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -599,15 +337,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -616,15 +346,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -633,15 +355,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -650,15 +364,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O0 -g -O0 -g -g -O0 -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD
 	-MP -Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -700,15 +406,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -717,15 +415,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -734,15 +424,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -751,45 +433,21 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-mcpu=cortex-m4 -mfloat-abi=soft -mthumb -Wall -fno-common -ffunction-sections -fdata-sections
 	-ffreestanding -fno-builtin -mapcs -std=gnu99 -o ${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU/os_cpu_a.S.obj -c
 	${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU/os_cpu_a.S 
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-mcpu=cortex-m4 -mfloat-abi=soft -mthumb -Wall -fno-common -ffunction-sections -fdata-sections
 	-ffreestanding -fno-builtin -mapcs -std=gnu99 -o ${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU/cpu_a.S.obj -c
 	${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU/cpu_a.S 
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -798,30 +456,14 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-mcpu=cortex-m4 -mfloat-abi=soft -mthumb -Wall -fno-common -ffunction-sections -fdata-sections
 	-ffreestanding -fno-builtin -mapcs -std=gnu99 -o ${ksdk_root}/platform/devices/MK60D10/startup/gcc/startup_MK60D10.S.obj -c
 	${ksdk_root}/platform/devices/MK60D10/startup/gcc/startup_MK60D10.S 
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -830,15 +472,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -847,15 +481,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -864,15 +490,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -881,15 +499,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -898,15 +508,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -915,15 +517,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -932,15 +526,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -949,15 +535,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -966,15 +544,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -983,15 +553,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1000,15 +562,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1017,15 +571,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1034,15 +580,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1051,15 +589,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1068,15 +598,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1085,15 +607,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1102,15 +616,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1119,15 +625,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1136,15 +634,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1153,15 +643,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1170,15 +652,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1187,15 +661,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1204,15 +670,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1221,15 +679,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1238,15 +688,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1255,15 +697,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1272,15 +706,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1289,15 +715,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1306,15 +724,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1323,15 +733,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
@@ -1340,15 +742,7 @@ In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucos
 
 In directory [${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc] ==>
 /opt/gcc-arm-none-eabi-4_9-2014q4/bin/arm-none-eabi-gcc
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU
-	-I${ksdk_root}/platform/osa/inc -I${ksdk_root}/platform/utilities/inc
-	-I${ksdk_root}/platform/CMSIS/Include -I${ksdk_root}/platform/devices
-	-I${ksdk_root}/platform/devices/MK60D10/include -I${ksdk_root}/platform/devices/MK60D10/startup
-	-I${ksdk_root}/platform/hal/inc -I${ksdk_root}/platform/drivers/inc
-	-I${ksdk_root}/platform/system/inc -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../..
-	-I${ksdk_root}/platform/drivers/src/i2c -I${ksdk_root}/rtos/uCOSIII/src/config
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source -I${ksdk_root}/rtos/uCOSIII/src/uC-CPU
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB -I${ksdk_root}/examples/twrk60d100m/demo_apps/i2c_rtos/i2c_rtos_ucosiii/armgcc/../../../..
+	$(include_dirs)
 	-O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII -DTWR_K60D100M
