@@ -1,5 +1,5 @@
 
-ksdk_root=/home/ye/program/ksdk_1.3.0
+ksdk_root := $(abspath ./)
 lib_inc_dirs := -I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU \
 	-I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU \
 	-I${ksdk_root}/rtos \
@@ -20,6 +20,10 @@ lib_inc_dirs := -I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Gen
 CFLAGS_O3 := -O3 -O3 -O3 -Os -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -MMD -MP \
 	-Wall -fno-common -ffunction-sections -fdata-sections -ffreestanding -fno-builtin \
 	-mapcs -std=gnu99 -DNDEBUG -DCPU_MK60DN512VMD10 -DFSL_RTOS_UCOSIII
+
+export ksdk_root
+export lib_inc_dirs
+export CFLAGS_O3
 
 arm-none-eabi-gcc
 	$(lib_inc_dirs)
