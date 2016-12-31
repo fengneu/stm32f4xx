@@ -1,12 +1,12 @@
 
 ksdk_root := $(abspath ./)
-lib_inc_dirs := -I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU \
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU \
+lib_inc_dirs := -I${ksdk_root}/uCOSIII/src/uCOS-III/Ports/ARM-Cortex-M4/Generic/GNU \
+	-I${ksdk_root}/uCOSIII/src/uC-CPU/ARM-Cortex-M4/GNU \
 	-I${ksdk_root}/rtos \
-	-I${ksdk_root}/rtos/uCOSIII/src/config \
-	-I${ksdk_root}/rtos/uCOSIII/src/uCOS-III/Source \
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-LIB \
-	-I${ksdk_root}/rtos/uCOSIII/src/uC-CPU \
+	-I${ksdk_root}/uCOSIII/src/config \
+	-I${ksdk_root}/uCOSIII/src/uCOS-III/Source \
+	-I${ksdk_root}/uCOSIII/src/uC-LIB \
+	-I${ksdk_root}/uCOSIII/src/uC-CPU \
 	-I${ksdk_root}/platform/CMSIS/Include \
 	-I${ksdk_root}/platform/devices \
 	-I${ksdk_root}/platform/devices/MK60D10/include \
